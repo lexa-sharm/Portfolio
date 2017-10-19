@@ -1,0 +1,357 @@
+/*
+================================================================================
+|                                     mixin                                     |
+================================================================================
+*/
+/*@mixin clearfix {
+	&:before, &:after {
+		content: '';
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin opensans($style: regular) {
+	@if $style == regular {
+		font-weight: 400;
+	}
+
+	@if $style == bold {
+		font-weight: 700;
+	}
+}
+
+@mixin gosttext($style: gost-a) {
+	@if $style == gost-a {
+		font-family: GOST-A;
+	}
+
+	@if $style == gost-b {
+		font-family: GOST-B;
+	}
+}*/
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,500,600,700&subset=cyrillic");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none; }
+  a:active, a:focus, a:hover {
+    text-decoration: none; }
+
+/*$bg-color: #222222;*/
+/*
+================================================================================
+|                                     base                                     |
+================================================================================
+*/
+/*@font-face {
+	font-family: 'Helvetica';
+	src: url('../fonts/helvetica/HelveticaRegular/HelveticaRegular.eot'),
+		url('../fonts/helvetica/HelveticaRegular/HelveticaRegular.woff') format('woff'),
+		url('../fonts/helvetica/HelveticaRegular/HelveticaRegular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}*/
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #333333;
+  /*font-family: Helvetica, sans-serif;*/
+  font-family: 'Oswald', sans-serif;
+  font-weight: normal; }
+
+/*
+================================================================================
+|                                     HEADER                                     |
+================================================================================
+*/
+.grid-3d-item__header .grid-3d-item__photo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding-top: 6%;
+  transition: all 1s; }
+  .grid-3d-item__header .grid-3d-item__photo .photo-wrap {
+    width: 80%;
+    margin: 0 auto;
+    /*border: 10px solid #e9e9e9;*/
+    /*@include border-radius(50%);*/
+    font-size: 0;
+    transition: all 1s; }
+    .grid-3d-item__header .grid-3d-item__photo .photo-wrap img {
+      width: 100%; }
+.grid-3d-item__header .grid-3d-item__photo + .grid-3d-item__descp h3 {
+  font-size: 28px;
+  margin-top: 10%; }
+.grid-3d-item__header .grid-3d-item__photo + .grid-3d-item__descp h1 {
+  font-size: 16px;
+  text-align: center; }
+.grid-3d-item__header .grid-3d-item__descp {
+  height: 50%;
+  text-align: center; }
+  .grid-3d-item__header .grid-3d-item__descp h3 {
+    margin-top: 10%;
+    margin-bottom: 20px;
+    font-size: 22px; }
+  .grid-3d-item__header .grid-3d-item__descp ul {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0 0 0 50px;
+    font-size: 16px;
+    list-style: none; }
+    .grid-3d-item__header .grid-3d-item__descp ul:before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      margin-top: -20px;
+      width: 40px;
+      height: 40px;
+      background: url(../img/header_sprite.png) no-repeat;
+      background-size: 100%; }
+    .grid-3d-item__header .grid-3d-item__descp ul li {
+      margin-bottom: 5px; }
+  .grid-3d-item__header .grid-3d-item__descp.phone ul li {
+    position: relative;
+    padding-right: 25px; }
+    .grid-3d-item__header .grid-3d-item__descp.phone ul li:nth-child(1):after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      margin-top: -10px;
+      width: 20px;
+      height: 20px;
+      background: url(../img/header_sprite.png) no-repeat;
+      background-size: 100%;
+      background-position: 0 -77px; }
+    .grid-3d-item__header .grid-3d-item__descp.phone ul li:nth-child(2):after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      margin-top: -10px;
+      width: 20px;
+      height: 20px;
+      background: url(../img/header_sprite.png) no-repeat;
+      background-size: 100%;
+      background-position: 0 -96px; }
+  .grid-3d-item__header .grid-3d-item__descp.adress ul:before {
+    background-position: 0 -38px; }
+  .grid-3d-item__header .grid-3d-item__descp.email ul:before {
+    margin-top: -24px;
+    background-position: 0 -76px; }
+  .grid-3d-item__header .grid-3d-item__descp.site ul:before {
+    background-position: 0 -117px; }
+
+.grid-3d-item__header:hover .grid-3d-item__photo {
+  padding-top: 3%;
+  transition: all 1s; }
+  .grid-3d-item__header:hover .grid-3d-item__photo .photo-wrap {
+    width: 40%;
+    border-width: 5px;
+    transition: all 1s; }
+
+/*
+================================================================================
+|                                     SECTION-REG                                     |
+================================================================================
+*/
+/*200px*/
+/*----------------------------------------------------------
+					STYLE GRID ITEMS
+----------------------------------------------------------*/
+.container-grid {
+  /*@include perspective(100px);*/
+  /*@include perspective-origin(50%, 50%);*/
+  /*position: absolute;*/
+  /*top: 50%;*/
+  /*left: 50%;*/
+  /*margin-top: ($block-size + ($block-margin * 2)) * 3 / -2;*/
+  /*margin-left: ($block-size + ($block-margin * 2)) * 3 / -2;*/
+  /*width: 100%;*/
+  margin: 50px 8%; }
+  .container-grid:after {
+    display: table;
+    content: '';
+    clear: both; }
+
+.grid-3d {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  /*width: 100%;*/
+  color: white;
+  font-size: 16px;
+  /*letter-spacing: 0.5em;*/
+  /*text-transform: uppercase;*/
+  -o-transform: translateZ(-100px);
+  -ms-transform: translateZ(-100px);
+  -moz-transform: translateZ(-100px);
+  -webkit-transform: translateZ(-100px);
+  transform: translateZ(-100px); }
+  .grid-3d a {
+    color: inherit;
+    text-decoration: none; }
+  .grid-3d > li {
+    float: left; }
+  .grid-3d:after {
+    display: table;
+    content: '';
+    clear: both; }
+
+.grid-3d-item {
+  position: relative;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 1px;
+  background-color: #111;
+  width: 19.8%;
+  -o-transition: all 200ms ease-in-out;
+  -ms-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /*opacity: 0.7;*/
+  border: 1px solid rgba(153, 153, 153, 0.5);
+  overflow: hidden; }
+  .grid-3d-item:hover {
+    opacity: 1; }
+
+/*----------------------------------------------------------
+					STYLE GRID ITEM
+----------------------------------------------------------*/
+.grid-3d-item__bg {
+  width: 100%;
+  height: 100%;
+  /*overflow: hidden;*/
+  /*background: url(../img/The-Thick-Forest.jpg) center no-repeat;*/
+  /*background-size: cover;*/
+  /*opacity: 0.1;*/
+  /* 	background: #66CC33;
+  background: #61d7a4; Old browsers
+  background: -moz-radial-gradient(center, ellipse cover,  #61d7a4 0%, #218359 100%); FF3.6+
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#61d7a4), color-stop(100%,#218359)); Chrome,Safari4+
+  background: -webkit-radial-gradient(center, ellipse cover,  #61d7a4 0%,#218359 100%); Chrome10+,Safari5.1+
+  background: -o-radial-gradient(center, ellipse cover,  #61d7a4 0%,#218359 100%); Opera 12+
+  background: -ms-radial-gradient(center, ellipse cover,  #61d7a4 0%,#218359 100%); IE10+
+  background: radial-gradient(ellipse at center,  #61d7a4 0%,#218359 100%); W3C
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61d7a4', endColorstr='#218359',GradientType=1 ); IE6-9 fallback on horizontal gradient */ }
+
+.grid-3d-item__bg:hover .grid-3d-item__title {
+  top: 60px;
+  opacity: 0.7; }
+.grid-3d-item__bg:hover .grid-3d-item__opacity img {
+  opacity: 0.9; }
+.grid-3d-item__bg:hover .grid-3d-item__descp {
+  bottom: 0;
+  background: rgba(28, 28, 28, 0.9);
+  opacity: 0.9; }
+
+.grid-3d-item__title {
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: 50%;
+  margin-top: -19px;
+  text-align: center;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  transition: all 1s; }
+
+.grid-3d-item__opacity img {
+  width: 100%;
+  opacity: 0.3;
+  transition: opacity 1s; }
+
+.grid-3d-item__descp {
+  position: absolute;
+  left: 0;
+  bottom: -65%;
+  /*bottom: 0;*/
+  width: 100%;
+  height: 65%;
+  padding: 0 5px;
+  background: rgba(28, 28, 28, 0);
+  transition: all 1s;
+  color: #f1f1f1;
+  opacity: 0; }
+
+.grid-3d-item__descp h3 {
+  margin: 20px 0;
+  padding: 0;
+  font-size: 22px;
+  text-transform: uppercase;
+  text-align: center; }
+
+.grid-3d-item__descp ul {
+  margin: 0;
+  padding-left: 30px;
+  font-size: 14px;
+  text-align: left;
+  list-style-type: square; }
+  .grid-3d-item__descp ul li {
+    margin-bottom: 5px; }
+
+/*
+================================================================================
+|                                     FOOTER                                     |
+================================================================================
+*/
+
+/*# sourceMappingURL=style.css.map */

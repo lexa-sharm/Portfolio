@@ -1,0 +1,24 @@
+/*
+================================================================================
+|                                     base                                     |
+================================================================================
+*/
+
+/*@font-face {
+	font-family: 'Helvetica';
+	src: url('../fonts/helvetica/HelveticaRegular/HelveticaRegular.eot'),
+		url('../fonts/helvetica/HelveticaRegular/HelveticaRegular.woff') format('woff'),
+		url('../fonts/helvetica/HelveticaRegular/HelveticaRegular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}*/
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,500,600,700&subset=cyrillic');
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: $bg-color;
+	/*font-family: Helvetica, sans-serif;*/
+	font-family: 'Oswald', sans-serif;
+	font-weight: normal;
+}

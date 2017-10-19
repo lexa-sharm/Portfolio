@@ -1,0 +1,82 @@
+/*
+================================================================================
+|                                     mixin                                     |
+================================================================================
+*/
+
+/*@mixin clearfix {
+	&:before, &:after {
+		content: '';
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin opensans($style: regular) {
+	@if $style == regular {
+		font-weight: 400;
+	}
+
+	@if $style == bold {
+		font-weight: 700;
+	}
+}
+
+@mixin gosttext($style: gost-a) {
+	@if $style == gost-a {
+		font-family: GOST-A;
+	}
+
+	@if $style == gost-b {
+		font-family: GOST-B;
+	}
+}*/
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin perspective($size) {
+	-o-perspective: $size;
+	-ms-perspective: $size;
+	-moz-perspective: $size;
+	-webkit-perspective: $size;
+	perspective: $size;
+}
+
+@mixin perspective-origin($X, $Y){
+	-o-perspective-origin: $X $Y;
+	-ms-perspective-origin: $X $Y;
+	-moz-perspective-origin: $X $Y;
+	-webkit-perspective-origin: $X $Y;
+	perspective-origin: $X $Y;
+}
+
+@mixin translateZ($size){
+	-o-transform: translateZ($size);
+	-ms-transform: translateZ($size);
+	-moz-transform: translateZ($size);
+	-webkit-transform: translateZ($size);
+	transform: translateZ($size);
+}
+
+@mixin box-sizing($st){
+	-o-box-sizing: $st;
+	-ms-box-sizing: $st;
+	-moz-box-sizing: $st;
+	-webkit-box-sizing: $st;
+	box-sizing: $st;
+}
+
+@mixin transition($tran-pr, $tran-dur, $tran-tim-fun){
+	-o-transition: $tran-pr $tran-dur $tran-tim-fun;
+	-ms-transition: $tran-pr $tran-dur $tran-tim-fun;
+	-moz-transition: $tran-pr $tran-dur $tran-tim-fun;
+	-webkit-transition: $tran-pr $tran-dur $tran-tim-fun;
+	transition: $tran-pr $tran-dur $tran-tim-fun;
+}

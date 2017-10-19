@@ -1,0 +1,14 @@
+//out: ../css/style.css
+
+//Global
+@import "_global/_mixin.scss";
+@import "_global/_reset.scss";
+@import "_global/_colors.scss";
+@import "_global/_base.scss";
+
+//Components
+
+@import "_components/_header.scss";
+@import "_components/_section-grid.scss";
+@import "_components/_footer.scss";
+@import "_components/_responsive.scss";

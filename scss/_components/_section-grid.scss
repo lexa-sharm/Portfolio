@@ -1,0 +1,163 @@
+/*
+================================================================================
+|                                     SECTION-REG                                     |
+================================================================================
+*/
+
+$block-size: 19.8%; /*200px*/
+$block-margin: 1px;
+$border-size: 1px;
+
+/*----------------------------------------------------------
+					STYLE GRID ITEMS
+----------------------------------------------------------*/
+
+
+.container-grid {
+	/*@include perspective(100px);*/
+	/*@include perspective-origin(50%, 50%);*/
+	/*position: absolute;*/
+	/*top: 50%;*/
+	/*left: 50%;*/
+	/*margin-top: ($block-size + ($block-margin * 2)) * 3 / -2;*/
+	/*margin-left: ($block-size + ($block-margin * 2)) * 3 / -2;*/
+	/*width: 100%;*/
+	margin: 50px 8%;
+	&:after {
+		display: table;
+		content: '';
+		clear: both;
+	}
+}
+
+.grid-3d {
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+	/*width: 100%;*/
+	color: rgba(#fff, 1);
+	font-size: 16px;
+  	/*letter-spacing: 0.5em;*/
+  	/*text-transform: uppercase;*/
+  	@include translateZ(-100px);
+  	a {
+  		color: inherit;
+  		text-decoration: none;
+  	}
+  	& > li {
+  		float: left;
+  	}
+  	&:after {
+  		display: table;
+  		content: '';
+  		clear: both;
+  	}
+}
+
+.grid-3d-item {
+	position: relative;
+	box-sizing: border-box;
+	cursor: pointer;
+	margin: $block-margin;
+	background-color: #111;
+	width: $block-size;
+	@include transition(all, 200ms, ease-in-out);
+	@include box-sizing(border-box);
+	/*opacity: 0.7;*/
+	&:hover {
+		opacity: 1;
+	}
+	border: $border-size solid rgba(#999, 0.5);
+	overflow: hidden;
+}
+
+
+/*----------------------------------------------------------
+					STYLE GRID ITEM
+----------------------------------------------------------*/
+
+
+.grid-3d-item__bg {
+	width: 100%;
+	height: 100%;
+	/*overflow: hidden;*/
+	/*background: url(../img/The-Thick-Forest.jpg) center no-repeat;*/
+	/*background-size: cover;*/
+	/*opacity: 0.1;*/
+/* 	background: #66CC33;
+background: #61d7a4; Old browsers
+background: -moz-radial-gradient(center, ellipse cover,  #61d7a4 0%, #218359 100%); FF3.6+
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#61d7a4), color-stop(100%,#218359)); Chrome,Safari4+
+background: -webkit-radial-gradient(center, ellipse cover,  #61d7a4 0%,#218359 100%); Chrome10+,Safari5.1+
+background: -o-radial-gradient(center, ellipse cover,  #61d7a4 0%,#218359 100%); Opera 12+
+background: -ms-radial-gradient(center, ellipse cover,  #61d7a4 0%,#218359 100%); IE10+
+background: radial-gradient(ellipse at center,  #61d7a4 0%,#218359 100%); W3C
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61d7a4', endColorstr='#218359',GradientType=1 ); IE6-9 fallback on horizontal gradient */
+}
+
+.grid-3d-item__bg:hover {
+	.grid-3d-item__title {
+		top: 60px;
+		opacity: 0.7;
+	}
+	.grid-3d-item__opacity img {
+		opacity: 0.9;
+	}
+	.grid-3d-item__descp {
+		bottom: 0;
+		background: rgba(28,28,28,0.9);
+		opacity: 0.9;
+	}
+}
+
+.grid-3d-item__title {
+	position: absolute;
+	display: block;
+	width: 100%;
+	top: 50%;
+	margin-top: -19px;
+	text-align: center;
+	font-size: 2em;
+	text-transform: uppercase;
+	letter-spacing: 0.3em;
+	transition: all 1s;
+}
+
+.grid-3d-item__opacity img {
+	width: 100%;
+	opacity: 0.3;
+	transition: opacity 1s;
+}
+
+.grid-3d-item__descp {
+	position: absolute;
+	left: 0;
+	bottom: -65%;
+	/*bottom: 0;*/
+	width: 100%;
+	height: 65%;
+	padding: 0 5px;
+	background: rgba(28,28,28,0);
+	transition: all 1s;
+	color: #f1f1f1;
+	opacity: 0;
+}
+
+.grid-3d-item__descp h3 {
+	margin: 20px 0;
+	padding: 0;
+	font-size: 22px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.grid-3d-item__descp ul {
+	margin: 0;
+	padding-left: 30px;
+	font-size: 14px;
+	text-align: left;
+	list-style-type: square;
+	li {
+		margin-bottom: 5px;
+	}
+}
