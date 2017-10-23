@@ -186,6 +186,7 @@ html, body {
 		}
 		.about-me__descr {
 			font-size: 20px;
+			line-height: 24px;
 			text-indent: 40px;
 			margin-bottom: 15px;
 		}
@@ -193,11 +194,13 @@ html, body {
 			font-size: 20px;
 			> p {
 				text-indent: 40px;
+				margin-bottom: 10px;
 			}
 			> ul {
 				padding-left: 80px;
 				li {
-				list-style: square;
+					list-style: square;
+					margin-bottom: 5px;
 				}
 			}
 		}

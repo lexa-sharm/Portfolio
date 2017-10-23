@@ -499,15 +499,18 @@ html, body {
     margin-bottom: 15px; }
   .main-content .about-me .about-me__descr {
     font-size: 20px;
+    line-height: 24px;
     text-indent: 40px;
     margin-bottom: 15px; }
   .main-content .about-me .about-me__list {
     font-size: 20px; }
     .main-content .about-me .about-me__list > p {
-      text-indent: 40px; }
+      text-indent: 40px;
+      margin-bottom: 10px; }
     .main-content .about-me .about-me__list > ul {
       padding-left: 80px; }
       .main-content .about-me .about-me__list > ul li {
-        list-style: square; }
+        list-style: square;
+        margin-bottom: 5px; }
 
 /*# sourceMappingURL=style.css.map */
