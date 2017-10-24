@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  initModalHref();
   $(window).resize(function(){
     slide_resize();
   });
@@ -13,6 +14,17 @@ function slide_resize(){
   $('.grid-3d-item').css({height: blockWidth + 'px'});
 }
 
+function initModalHref(){
+  $('[data-href]').click(function(){
+    $('.modal iframe').attr('src', $(this).data('href'));
+    $('.modal').show();
+  });
+
+  $('.backdrop').click(function(){
+    $('.modal').hide();
+    $('.modal iframe').removeAttr('src');
+  });
+}
 
 
 
@@ -258,22 +270,22 @@ new Blocks($('.grid-3d-item'));
 /**
  * Additional 3D shift on mouse move
  */
-// var $blocks = $('.blocks');
+/*var $blocks = $('.grid-3d');
 
-// window.addEventListener('mousemove', function(event){
-  // var width = $(window).width();
-  // var height = $(window).height();
+window.addEventListener('mousemove', function(event){
+  var width = $(window).width();
+  var height = $(window).height();
   
-  // var x = ((event.pageX - (width / 2)) / width) * 2;
-  // var y = ((event.pageY - (height / 2)) / height) * 2;
+  var x = ((event.pageX - (width / 2)) / width) * 2;
+  var y = ((event.pageY - (height / 2)) / height) * 2;
 
-  // Blocks
-  // $blocks.css({
-  //   'transform' :  'translateZ(-10px) rotateY(' + (x * -2) + 'deg) rotateX(' + (y * 2) + 'deg)'
-  // });
+//  Blocks
+  $blocks.css({
+    'transform' :  'translateZ(-10px) rotateY(' + (x * -2) + 'deg) rotateX(' + (y * 2) + 'deg)'
+  });
   
-  //Background
-  // $('body').css({
-  //   'background-position' :  (x * -5) + 'px ' + (y * -5) + 'px' 
-  // });
-// }, false);
+//  Background
+  $('body').css({
+    'background-position' :  (x * -5) + 'px ' + (y * -5) + 'px' 
+  });
+}, false);*/

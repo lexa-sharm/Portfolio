@@ -154,7 +154,7 @@ body {
       margin-top: -20px;
       width: 40px;
       height: 40px;
-      background: url(../img/header_sprite.png) no-repeat;
+      background: url(../img/header_sprite_white.png) no-repeat;
       background-size: 100%; }
     .grid-3d-item__header .grid-3d-item__descp ul li {
       margin-bottom: 5px; }
@@ -170,7 +170,7 @@ body {
       margin-top: -10px;
       width: 20px;
       height: 20px;
-      background: url(../img/header_sprite.png) no-repeat;
+      background: url(../img/header_sprite_white.png) no-repeat;
       background-size: 100%;
       background-position: 0 -77px; }
     .grid-3d-item__header .grid-3d-item__descp.phone ul li:nth-child(2):after {
@@ -182,7 +182,7 @@ body {
       margin-top: -10px;
       width: 20px;
       height: 20px;
-      background: url(../img/header_sprite.png) no-repeat;
+      background: url(../img/header_sprite_white.png) no-repeat;
       background-size: 100%;
       background-position: 0 -96px; }
   .grid-3d-item__header .grid-3d-item__descp.adress ul:before {
@@ -201,6 +201,32 @@ body {
     border-width: 5px;
     transition: all 1s; }
 
+.modal {
+  z-index: 1000; }
+
+.modal, .modal .backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; }
+
+.modal .backdrop {
+  background: rgba(0, 0, 0, 0.5); }
+
+.modal .content {
+  width: 65%;
+  margin: 0 auto;
+  z-index: 1002;
+  position: relative;
+  height: 100%; }
+
+.modal .content iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  z-index: 1001; }
+
 /*
 ================================================================================
 |                                     SECTION-REG                                     |
@@ -211,7 +237,7 @@ body {
 					STYLE GRID ITEMS
 ----------------------------------------------------------*/
 .container-grid {
-  /*@include perspective(100px);*/
+  /*@include perspective(1000px);*/
   /*@include perspective-origin(50%, 50%);*/
   /*position: absolute;*/
   /*top: 50%;*/
@@ -362,13 +388,15 @@ html, body {
   width: 100%;
   height: 100%; }
 
+.nobg {
+  background-color: transparent !important; }
+
 .wrapper {
   min-height: 100%;
   height: auto !important;
   height: 100%;
   background-color: #ffffff;
-  max-width: 65%;
-  margin: 0 auto; }
+  max-width: 100%; }
 
 .main-header {
   margin-bottom: 40px; }
@@ -493,7 +521,7 @@ html, body {
 
 .main-content .about-me {
   padding: 0 5%; }
-  .main-content .about-me .about-me__head {
+  .main-content .about-me h3 {
     font-size: 40px;
     text-align: center;
     margin-bottom: 15px; }
