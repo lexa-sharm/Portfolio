@@ -17,16 +17,22 @@ function slide_resize(){
 function initModalHref(){
   $('[data-href]').click(function(){
     $('.modal iframe').attr('src', $(this).data('href'));
-    $('.modal').show();
+    $('.modal').slideDown(300);
     $("body").css("overflow","hidden");
   });
 
   $('.backdrop').click(function(){
-    $('.modal').hide();
+    $('.modal').slideUp(300);
     $('.modal iframe').removeAttr('src');
     $("body").css("overflow","auto");
   });
 }
+
+
+
+
+
+
 
 
 

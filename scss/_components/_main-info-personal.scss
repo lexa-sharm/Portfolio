@@ -1,6 +1,6 @@
 /*
 ================================================================================
-|                                     HEADER                                     |
+|                            MAIN-INFO-PERSONAL                                 |
 ================================================================================
 */
 
@@ -21,6 +21,7 @@ html, body {
 }
 
 .wrapper {
+	position: relative;
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
@@ -28,6 +29,7 @@ html, body {
 	max-width: 100%;
 	background: url(../img/bg_texture_3d_1.png) repeat-y;
 	overflow-x: hidden;
+	z-index: 2000;
 }
 
 .main-header {
@@ -46,6 +48,7 @@ html, body {
 	background-size: 100% 100%;
 	padding-top: 40px;
 	overflow: hidden;
+	z-index: 800;
 	&:hover {
 		.header-animation .left-animation {
 			transform: rotateZ(0deg);
@@ -160,7 +163,7 @@ html, body {
 	position: absolute;
 	left: 0;
 	bottom: -90px;
-	z-index: 1000;
+	z-index: 999;
 	font-size: 0;
 	> div {
 		display: inline-block;

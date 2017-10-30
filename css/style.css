@@ -199,84 +199,6 @@ body {
     border-width: 5px;
     transition: all 1s; }
 
-.modal {
-  z-index: 1000;
-  overflow: hidden; }
-
-.modal, .modal .backdrop {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0; }
-
-.modal .backdrop {
-  background: rgba(0, 0, 0, 0.7); }
-
-.modal .content {
-  width: 65%;
-  margin: 0 auto;
-  z-index: 1002;
-  position: relative;
-  height: 100%; }
-
-.modal .content iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-  z-index: 1001; }
-
-.outer {
-  position: absolute;
-  width: 70px;
-  top: 20px;
-  right: 20px;
-  cursor: pointer; }
-
-.inner {
-  position: relative;
-  width: inherit;
-  text-align: center; }
-
-label {
-  font-size: .8em;
-  line-height: 4em;
-  text-transform: uppercase;
-  color: #fff;
-  transition: all .3s ease-in;
-  opacity: 0;
-  cursor: pointer; }
-
-.inner:before, .inner:after {
-  position: absolute;
-  content: '';
-  height: 1px;
-  width: inherit;
-  background: #fff;
-  left: 0;
-  transition: all .3s ease-in; }
-
-.inner:before {
-  top: 50%;
-  transform: rotate(45deg); }
-
-.inner:after {
-  bottom: 50%;
-  transform: rotate(-45deg); }
-
-.outer:hover label {
-  opacity: 1; }
-
-.outer:hover .inner:before,
-.outer:hover .inner:after {
-  transform: rotate(0); }
-
-.outer:hover .inner:before {
-  top: 0; }
-
-.outer:hover .inner:after {
-  bottom: 0; }
-
 /*
 ================================================================================
 |                                     SECTION-REG                                     |
@@ -432,9 +354,87 @@ label {
 |                                     FOOTER                                     |
 ================================================================================
 */
+.modal {
+  z-index: 1000;
+  overflow: hidden; }
+
+.modal, .modal .backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; }
+
+.modal .backdrop {
+  background: rgba(0, 0, 0, 0.7); }
+
+.modal .content {
+  width: 65%;
+  margin: 0 auto;
+  z-index: 1002;
+  position: relative;
+  height: 100%; }
+
+.modal .content iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  z-index: 1001; }
+
+.outer {
+  position: absolute;
+  width: 70px;
+  top: 20px;
+  right: 20px;
+  cursor: pointer; }
+
+.inner {
+  position: relative;
+  width: inherit;
+  text-align: center; }
+
+label {
+  font-size: .8em;
+  line-height: 4em;
+  text-transform: uppercase;
+  color: #fff;
+  transition: all .3s ease-in;
+  opacity: 0;
+  cursor: pointer; }
+
+.inner:before, .inner:after {
+  position: absolute;
+  content: '';
+  height: 1px;
+  width: inherit;
+  background: #fff;
+  left: 0;
+  transition: all .3s ease-in; }
+
+.inner:before {
+  top: 50%;
+  transform: rotate(45deg); }
+
+.inner:after {
+  bottom: 50%;
+  transform: rotate(-45deg); }
+
+.outer:hover label {
+  opacity: 1; }
+
+.outer:hover .inner:before,
+.outer:hover .inner:after {
+  transform: rotate(0); }
+
+.outer:hover .inner:before {
+  top: 0; }
+
+.outer:hover .inner:after {
+  bottom: 0; }
+
 /*
 ================================================================================
-|                                     HEADER                                     |
+|                            MAIN-INFO-PERSONAL                                 |
 ================================================================================
 */
 html, body {
@@ -445,13 +445,15 @@ html, body {
   background-color: #fff; }
 
 .wrapper {
+  position: relative;
   min-height: 100%;
   height: auto !important;
   height: 100%;
   background-color: #ffffff;
   max-width: 100%;
   background: url(../img/bg_texture_3d_1.png) repeat-y;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  z-index: 2000; }
 
 .main-header {
   margin-bottom: 40px; }
@@ -466,7 +468,8 @@ html, body {
   background: url(../img/bg_header_modal_dawn.jpg) no-repeat;
   background-size: 100% 100%;
   padding-top: 40px;
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 800; }
   .personal:hover .header-animation .left-animation {
     transform: rotateZ(0deg); }
   .personal:hover .header-animation .right-animation {
@@ -553,7 +556,7 @@ html, body {
   position: absolute;
   left: 0;
   bottom: -90px;
-  z-index: 1000;
+  z-index: 999;
   font-size: 0; }
   .header-animation > div {
     display: inline-block;
@@ -595,5 +598,49 @@ html, body {
       .main-content .about-me .about-me__list > ul li {
         list-style: square;
         margin-bottom: 5px; }
+
+/*
+================================================================================
+|                            MAIN-INFO-SKILLS                                   |
+================================================================================
+*/
+.wrap-skills {
+  width: 80%;
+  margin: 0 auto; }
+
+.holder {
+  padding-left: 120px; }
+
+.bar {
+  background: #e74c3c;
+  width: 0;
+  margin: 15px 0;
+  color: #fff;
+  position: relative;
+  transition: width 2s, background .2s;
+  -webkit-transform: translate3d(0, 0, 0);
+  clear: both; }
+  .bar:nth-of-type(2n) {
+    background: #ed7669; }
+  .bar .label {
+    /*font-size: .75em;*/
+    padding: 10px;
+    background: #3d3d3d;
+    width: 120px;
+    display: inline-block;
+    position: relative;
+    right: 120px;
+    z-index: 2;
+    /*font-weight: bold;*/ }
+    .bar .label.light {
+      background: #575757; }
+
+.count {
+  position: absolute;
+  right: .25em;
+  top: .75em;
+  padding: .15em;
+  font-size: .75em;
+  font-weight: bold; }
 
 /*# sourceMappingURL=style.css.map */

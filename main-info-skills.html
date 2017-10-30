@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="nobg">
+	<div class="wrapper">
+	<header class="main-header">
+		<div class="container">
+			<div class="personal">
+				<div class="personal__info">
+					<ul class="personal__list">
+						<li class="personal__phone">
+							<a href="tel:+380964831286">+38(096)483-12-86</a>
+						</li>
+						<li class="personal__location">
+							<p>г. Киев, просп. Г.Гонгадзе, 12</p>
+						</li>
+						<li class="personal__photo">
+							<div>
+								<img src="img/Photo.png" alt="Леша Шамрицкий">
+							</div>
+						</li>
+						<li class="personal__site">
+							<a href="https://www.mainsite.com">lexa-sharm</a>
+						</li>
+						<li class="personal__mail">
+							<a href="mailto:lesha.shamryzkiy@gmail.com">lesha.shamryzkiy@gmail.com</a>
+						</li>
+					</ul>
+				</div>
+				<div class="personal__name">
+					<h2>Леша Шамрицкий</h2>
+				</div>
+				<div class="personal__prof">
+					<h1>Front-End developer, HTML-верстальщик</h1>
+				</div>
+				<div class="header-animation">
+					<div class="left-animation"></div>
+					<div class="right-animation"></div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main class="main-content">
+		<div class="container">
+			<div class="main-skills">
+				<h3 class="about-me__head">Мои навыки</h3>
+
+
+				<div class="wrap-skills">
+					<div class="holder">
+						<div class="bar cf" data-percent="90%">
+							<span class="label light">HTML</span>
+						</div>
+						<div class="bar cf" data-percent="90%">
+							<span class="label">CSS</span>
+						</div>
+						<div class="bar cf" data-percent="60%">
+							<span class="label">JavaScript</span>
+						</div>
+						<div class="bar cf" data-percent="60%">
+							<span class="label light">jQuery</span>
+						</div>
+						<div class="bar cf" data-percent="70%">
+							<span class="label light">SASS/LESS</span>
+						</div>
+						<div class="bar cf" data-percent="50%">
+							<span class="label light">Ajax</span>
+						</div>
+						<div class="bar cf" data-percent="75%">
+							<span class="label light">Bootstrap</span>
+						</div>
+						<div class="bar cf" data-percent="10%">
+							<span class="label light">Angular</span>
+						</div>
+						<div class="bar cf" data-percent="30%">
+							<span class="label light">PHP</span>
+						</div>
+						<div class="bar cf" data-percent="90%">
+							<span class="label">Git/GitHub</span>
+						</div>
+						<div class="bar cf" data-percent="85%">
+							<span class="label">Photoshop</span>
+						</div>
+						<div class="bar cf" data-percent="40%">
+							<span class="label">WordPress</span>
+						</div>
+					</div>
+				</div>
+
+
+
+			</div>
+		</div>
+	</main>
+
+	</div>
+	<script>
+		setTimeout(function start (){
+
+			$('.bar').each(function(i){  
+				var $bar = $(this);
+				$(this).append('<span class="count"></span>')
+				setTimeout(function(){
+					$bar.css('width', $bar.attr('data-percent'));
+				}, i*100);
+			});
+
+			$('.count').each(function () {
+				$(this).prop('Counter',0).animate({
+					Counter: $(this).parent('.bar').attr('data-percent')
+				}, {
+					duration: 2000,
+					easing: 'swing',
+					step: function (now) {
+						$(this).text(Math.ceil(now) +'%');
+					}
+				});
+			});
+
+		}, 500)
+
+	</script>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="js/distort.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
