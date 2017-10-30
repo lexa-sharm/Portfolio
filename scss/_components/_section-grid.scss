@@ -13,6 +13,10 @@ $border-size: 1px;
 ----------------------------------------------------------*/
 
 
+.wrap-grid-3d {
+	padding: 50px 0;
+}
+
 .container-grid {
 	/*@include perspective(1000px);*/
 	/*@include perspective-origin(50%, 50%);*/
@@ -22,7 +26,7 @@ $border-size: 1px;
 	/*margin-top: ($block-size + ($block-margin * 2)) * 3 / -2;*/
 	/*margin-left: ($block-size + ($block-margin * 2)) * 3 / -2;*/
 	/*width: 100%;*/
-	margin: 50px 8%;
+	margin: 0 8%;
 	&:after {
 		display: table;
 		content: '';

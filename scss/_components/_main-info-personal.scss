@@ -17,7 +17,7 @@ html, body {
 	height: 100%;
 }
 .nobg {
-	background-color: $nobg-color;
+	background-color: #fff;
 }
 
 .wrapper {
@@ -26,6 +26,8 @@ html, body {
 	height: 100%;
 	background-color: #ffffff;
 	max-width: 100%;
+	background: url(../img/bg_texture_3d_1.png) repeat-y;
+	overflow-x: hidden;
 }
 
 .main-header {
@@ -35,12 +37,12 @@ html, body {
 .container {
 	max-width: 100%;
 	margin: 0 auto;
-	background-color: #ffffff;
+	/*background-color: #ffffff;*/
 }
 
 .personal {
 	position: relative;
-	background: url(../img/header_bg.jpg) no-repeat;
+	background: url(../img/bg_header_modal_dawn.jpg) no-repeat;
 	background-size: 100% 100%;
 	padding-top: 40px;
 	overflow: hidden;

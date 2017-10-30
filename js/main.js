@@ -18,11 +18,13 @@ function initModalHref(){
   $('[data-href]').click(function(){
     $('.modal iframe').attr('src', $(this).data('href'));
     $('.modal').show();
+    $("body").css("overflow","hidden");
   });
 
   $('.backdrop').click(function(){
     $('.modal').hide();
     $('.modal iframe').removeAttr('src');
+    $("body").css("overflow","auto");
   });
 }
 

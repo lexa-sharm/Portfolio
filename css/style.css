@@ -96,8 +96,6 @@ a {
 	font-style: normal;
 }*/
 body {
-  margin: 0;
-  padding: 0;
   background-color: #333333;
   /*font-family: Helvetica, sans-serif;*/
   font-family: 'Oswald', sans-serif;
@@ -202,7 +200,8 @@ body {
     transition: all 1s; }
 
 .modal {
-  z-index: 1000; }
+  z-index: 1000;
+  overflow: hidden; }
 
 .modal, .modal .backdrop {
   position: absolute;
@@ -212,7 +211,7 @@ body {
   right: 0; }
 
 .modal .backdrop {
-  background: rgba(0, 0, 0, 0.5); }
+  background: rgba(0, 0, 0, 0.7); }
 
 .modal .content {
   width: 65%;
@@ -227,6 +226,57 @@ body {
   border: 0;
   z-index: 1001; }
 
+.outer {
+  position: absolute;
+  width: 70px;
+  top: 20px;
+  right: 20px;
+  cursor: pointer; }
+
+.inner {
+  position: relative;
+  width: inherit;
+  text-align: center; }
+
+label {
+  font-size: .8em;
+  line-height: 4em;
+  text-transform: uppercase;
+  color: #fff;
+  transition: all .3s ease-in;
+  opacity: 0;
+  cursor: pointer; }
+
+.inner:before, .inner:after {
+  position: absolute;
+  content: '';
+  height: 1px;
+  width: inherit;
+  background: #fff;
+  left: 0;
+  transition: all .3s ease-in; }
+
+.inner:before {
+  top: 50%;
+  transform: rotate(45deg); }
+
+.inner:after {
+  bottom: 50%;
+  transform: rotate(-45deg); }
+
+.outer:hover label {
+  opacity: 1; }
+
+.outer:hover .inner:before,
+.outer:hover .inner:after {
+  transform: rotate(0); }
+
+.outer:hover .inner:before {
+  top: 0; }
+
+.outer:hover .inner:after {
+  bottom: 0; }
+
 /*
 ================================================================================
 |                                     SECTION-REG                                     |
@@ -236,6 +286,9 @@ body {
 /*----------------------------------------------------------
 					STYLE GRID ITEMS
 ----------------------------------------------------------*/
+.wrap-grid-3d {
+  padding: 50px 0; }
+
 .container-grid {
   /*@include perspective(1000px);*/
   /*@include perspective-origin(50%, 50%);*/
@@ -245,7 +298,7 @@ body {
   /*margin-top: ($block-size + ($block-margin * 2)) * 3 / -2;*/
   /*margin-left: ($block-size + ($block-margin * 2)) * 3 / -2;*/
   /*width: 100%;*/
-  margin: 50px 8%; }
+  margin: 0 8%; }
   .container-grid:after {
     display: table;
     content: '';
@@ -389,14 +442,16 @@ html, body {
   height: 100%; }
 
 .nobg {
-  background-color: transparent !important; }
+  background-color: #fff; }
 
 .wrapper {
   min-height: 100%;
   height: auto !important;
   height: 100%;
   background-color: #ffffff;
-  max-width: 100%; }
+  max-width: 100%;
+  background: url(../img/bg_texture_3d_1.png) repeat-y;
+  overflow-x: hidden; }
 
 .main-header {
   margin-bottom: 40px; }
@@ -404,11 +459,11 @@ html, body {
 .container {
   max-width: 100%;
   margin: 0 auto;
-  background-color: #ffffff; }
+  /*background-color: #ffffff;*/ }
 
 .personal {
   position: relative;
-  background: url(../img/header_bg.jpg) no-repeat;
+  background: url(../img/bg_header_modal_dawn.jpg) no-repeat;
   background-size: 100% 100%;
   padding-top: 40px;
   overflow: hidden; }
