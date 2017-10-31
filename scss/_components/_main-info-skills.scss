@@ -43,15 +43,13 @@ $dark: #3d3d3d;
 		background: lighten($red , 10%);
 	}
 	.label {
-		/*font-size: .75em;*/
 		padding: 10px;
 		background: $dark;
-		width: 120px;
+		width: 100px;
 		display: inline-block;
 		position: relative;
-		right: 120px;
+		margin-left: -120px;
 		z-index: 2;
-		/*font-weight: bold;*/
 
 		&.light {
 			background: lighten($dark , 10% );

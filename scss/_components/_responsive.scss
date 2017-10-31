@@ -1,0 +1,170 @@
+/*
+================================================================================
+|                                SECTION-GRID                                   |
+================================================================================
+*/
+
+
+@media (min-width: 1279px) and (max-width: 1400px) {
+
+	body {
+		font-size: 0.9em;
+	}
+	.grid-3d-item__descp h3 {
+		margin: 10px 0;
+	}
+	.grid-3d-item__bg:hover {
+		.grid-3d-item__title {
+			top: 50px;
+		}
+	}
+
+}
+
+@media (min-width: 1023px) and (max-width: 1279px) {
+
+	body {
+		font-size: 0.69em;
+	}
+	.grid-3d-item {
+		width: 19%;
+	}
+	.grid-3d-item__title {
+		margin-top: -16px;
+	}
+	.grid-3d-item__descp h3 {
+		margin: 6px 0;
+	}
+	.grid-3d-item__descp ul {
+		padding-left: 15px;
+	}
+	.grid-3d-item__bg:hover {
+		.grid-3d-item__title {
+			top: 35px;
+		}
+	}
+
+}
+
+@media (min-width: 767px) and (max-width: 1023px) {
+
+	body {
+		font-size: 0.5em;
+	}
+	.grid-3d-item {
+		width: 19%;
+	}
+	.grid-3d-item__title {
+		margin-top: -14px;
+	}
+	.grid-3d-item__descp {
+		display: none;
+	}
+	.grid-3d-item__bg:hover {
+		.grid-3d-item__title {
+			top: 50%;
+			opacity: 1;
+		}
+	}
+
+}
+
+
+/*
+================================================================================
+|                            SECTION-GRID-HEADER                                |
+================================================================================
+*/
+
+
+@media (min-width: 1279px) and (max-width: 1400px) {
+
+.grid-3d-item__header {
+	.grid-3d-item__descp {
+		h3 {
+			margin-bottom: 15px;
+		}
+	}
+}
+
+}
+
+@media (min-width: 1023px) and (max-width: 1279px) {
+
+	.grid-3d-item__header {
+		.grid-3d-item__descp {
+			h3 {
+				margin-bottom: 15px;
+			}
+			ul {
+				padding: 0 0 0 30px;
+				&:before {
+					margin-top: -12px;
+					width: 24px;
+					height: 24px;
+				}
+			}
+			&.phone {
+				ul li {
+					padding-right: 16px;
+					&:after {
+						margin-top: -7px;
+						width: 14px;
+						height: 14px;
+					}
+					&:nth-child(1):after {
+						background-position: 0 -54px;
+					}
+					&:nth-child(2):after {
+						background-position: 0 -68px;
+					}
+				}
+			}
+			&.adress ul:before {
+				background-position: 0 -23px;
+			}
+			&.email ul:before {
+				margin-top: -16px;
+				background-position: 0 -46px;
+			}
+			&.site ul:before {
+				background-position: 0 -70px;
+			}
+		}
+	}
+
+}
+
+@media (min-width: 767px) and (max-width: 1023px) {
+
+	.grid-3d-item__header:hover {
+		.grid-3d-item__photo {
+			padding-top: 6%;
+			.photo-wrap {
+				width: 80%;
+			}
+		}
+	}
+
+}
+
+
+/*
+================================================================================
+|                            MODAL INFO PERSONAL                                |
+================================================================================
+*/
+
+
+@media (min-width: 1400px) and (max-width: 1650px) {
+
+	.personal__list {
+		.personal__phone, .personal__location {
+			margin-left: 2%;
+		}
+		.personal__mail, .personal__site {
+			margin-right: 2%;
+		}
+	}
+
+}

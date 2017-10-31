@@ -1,12 +1,14 @@
 /*
 ================================================================================
-|                                     SECTION-REG                                     |
+|                                SECTION-GRID                                   |
 ================================================================================
 */
 
-$block-size: 19.8%; /*200px*/
-$block-margin: 1px;
-$border-size: 1px;
+$block-item-size: 19.8%; /*200px*/
+$block-item-margin: 1px;
+$border-item-size: 1px;
+$bg-item-color: #111111;
+$color-text: #ffffff;
 
 /*----------------------------------------------------------
 					STYLE GRID ITEMS
@@ -27,52 +29,26 @@ $border-size: 1px;
 	/*margin-left: ($block-size + ($block-margin * 2)) * 3 / -2;*/
 	/*width: 100%;*/
 	margin: 0 8%;
-	&:after {
-		display: table;
-		content: '';
-		clear: both;
-	}
 }
 
 .grid-3d {
 	margin: 0 auto;
 	padding: 0;
 	list-style: none;
-	/*width: 100%;*/
-	color: rgba(#fff, 1);
-	font-size: 16px;
-  	/*letter-spacing: 0.5em;*/
-  	/*text-transform: uppercase;*/
-  	@include translateZ(-100px);
-  	a {
-  		color: inherit;
-  		text-decoration: none;
-  	}
-  	& > li {
-  		float: left;
-  	}
-  	&:after {
-  		display: table;
-  		content: '';
-  		clear: both;
-  	}
-}
-
-.grid-3d-item {
-	position: relative;
-	box-sizing: border-box;
-	cursor: pointer;
-	margin: $block-margin;
-	background-color: #111;
-	width: $block-size;
-	@include transition(all, 200ms, ease-in-out);
-	@include box-sizing(border-box);
-	/*opacity: 0.7;*/
-	&:hover {
-		opacity: 1;
+	color: rgba($color-text, 1);
+	@include translateZ(-100px);
+	a {
+		color: inherit;
+		text-decoration: none;
 	}
-	border: $border-size solid rgba(#999, 0.5);
-	overflow: hidden;
+	& > li {
+		float: left;
+	}
+	&:after {
+		display: table;
+		content: '';
+		clear: both;
+	}
 }
 
 
@@ -81,37 +57,27 @@ $border-size: 1px;
 ----------------------------------------------------------*/
 
 
+.grid-3d-item {
+	position: relative;
+	cursor: pointer;
+	margin: $block-item-margin;
+	background-color: $bg-item-color;
+	width: $block-item-size;
+	@include transition(all, 200ms, ease-in-out);
+	@include box-sizing(border-box);
+	border: $border-item-size solid rgba(#999, 0.5);
+	overflow: hidden;
+}
+
 .grid-3d-item__bg {
 	width: 100%;
 	height: 100%;
-	/*overflow: hidden;*/
-	/*background: url(../img/The-Thick-Forest.jpg) center no-repeat;*/
-	/*background-size: cover;*/
-	/*opacity: 0.1;*/
-/* 	background: #66CC33;
-background: #61d7a4; Old browsers
-background: -moz-radial-gradient(center, ellipse cover,  #61d7a4 0%, #218359 100%); FF3.6+
-background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#61d7a4), color-stop(100%,#218359)); Chrome,Safari4+
-background: -webkit-radial-gradient(center, ellipse cover,  #61d7a4 0%,#218359 100%); Chrome10+,Safari5.1+
-background: -o-radial-gradient(center, ellipse cover,  #61d7a4 0%,#218359 100%); Opera 12+
-background: -ms-radial-gradient(center, ellipse cover,  #61d7a4 0%,#218359 100%); IE10+
-background: radial-gradient(ellipse at center,  #61d7a4 0%,#218359 100%); W3C
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61d7a4', endColorstr='#218359',GradientType=1 ); IE6-9 fallback on horizontal gradient */
 }
 
-.grid-3d-item__bg:hover {
-	.grid-3d-item__title {
-		top: 60px;
-		opacity: 0.7;
-	}
-	.grid-3d-item__opacity img {
-		opacity: 0.9;
-	}
-	.grid-3d-item__descp {
-		bottom: 0;
-		background: rgba(28,28,28,0.9);
-		opacity: 0.9;
-	}
+.grid-3d-item__opacity img {
+	width: 100%;
+	opacity: 0.3;
+	@include transition(opacity, 1s, ease);
 }
 
 .grid-3d-item__title {
@@ -124,13 +90,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61d7a4', end
 	font-size: 2em;
 	text-transform: uppercase;
 	letter-spacing: 0.3em;
-	transition: all 1s;
-}
-
-.grid-3d-item__opacity img {
-	width: 100%;
-	opacity: 0.3;
-	transition: opacity 1s;
+	@include transition(all, 1s, ease);
 }
 
 .grid-3d-item__descp {
@@ -141,27 +101,43 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61d7a4', end
 	width: 100%;
 	height: 65%;
 	padding: 0 5px;
-	background: rgba(28,28,28,0);
-	transition: all 1s;
+	@include transition(all, 1s, ease);
 	color: #f1f1f1;
 	opacity: 0;
 }
 
 .grid-3d-item__descp h3 {
-	margin: 20px 0;
+	margin: 15px 0;
 	padding: 0;
-	font-size: 22px;
+	font-size: 1.4em;
 	text-transform: uppercase;
 	text-align: center;
 }
 
 .grid-3d-item__descp ul {
 	margin: 0;
-	padding-left: 30px;
-	font-size: 14px;
+	padding-left: 25px;
+	font-size: 0.74em;
+	font-weight: 300;
+	letter-spacing: 0.05em;
 	text-align: left;
-	list-style-type: square;
+	list-style-type: circle;
 	li {
-		margin-bottom: 5px;
+		margin-bottom: 3px;
+	}
+}
+
+.grid-3d-item__bg:hover {
+	.grid-3d-item__title {
+		top: 50px;
+		opacity: 0.3;
+	}
+	.grid-3d-item__opacity img {
+		opacity: 0.9;
+	}
+	.grid-3d-item__descp {
+		bottom: 0;
+		background: rgba(28,28,28,0.9);
+		opacity: 0.9;
 	}
 }

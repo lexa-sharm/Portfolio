@@ -8,13 +8,16 @@
 
 //Components
 
-@import "_components/_header.scss";
+@import "_components/_sectoin-grid-header.scss";
 @import "_components/_section-grid.scss";
 @import "_components/_footer.scss";
 @import "_components/_modal.scss";
-@import "_components/_responsive.scss";
 
 //Main-info
 
 @import "_components/_main-info-personal.scss";
 @import "_components/_main-info-skills.scss";
+
+//Responsive
+
+@import "_components/_responsive.scss";

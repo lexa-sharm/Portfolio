@@ -12,11 +12,18 @@
 	font-weight: normal;
 	font-style: normal;
 }*/
-@import url('https://fonts.googleapis.com/css?family=Oswald:400,500,600,700&subset=cyrillic');
+/*@import url('https://fonts.googleapis.com/css?family=Oswald:400,500,600,700&subset=cyrillic');*/
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&subset=cyrillic');
 
 body {
-	background-color: $bg-color;
+	background-color: #333333;
 	/*font-family: Helvetica, sans-serif;*/
+	font-size: 1em;
 	font-family: 'Oswald', sans-serif;
 	font-weight: normal;
+}
+
+.nobg {
+	background-color: #fff;
+	font-size: 1em;
 }
