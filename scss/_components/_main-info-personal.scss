@@ -63,14 +63,15 @@ html, body {
 
 .personal__list {
 	position: relative;
-	height: 100px;
+	height: 120px;
 	margin-bottom: 50px;
+	padding-top: 42px;
 	background-color: $bg-info-color;
 	border-top: $border;
 	border-bottom: $border;
 	> li {
 		position: relative;
-		margin-top: 32px;
+		/*margin-top: 32px;*/
 		padding-left: 35px;
 		color: $text-info-color;
 		&:before {
@@ -114,7 +115,7 @@ html, body {
 		float: left;
 		margin-left: 4%;
 	}
-	.personal__mail, .personal__site {
+	.personal__mail, .personal__skype {
 		float: right;
 		margin-right: 4%;
 	}
@@ -133,7 +134,7 @@ html, body {
 			background-position: 0 -58px;
 		}
 	}
-	.personal__site {
+	.personal__skype {
 		&:before {
 			background-position: 0 -87px;
 		}

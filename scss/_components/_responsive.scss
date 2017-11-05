@@ -66,6 +66,12 @@
 			opacity: 1;
 		}
 	}
+	.modal .content {
+		width: 80%;
+	}
+	.outer {
+		right: 6px;
+	}
 
 }
 
@@ -156,14 +162,77 @@
 */
 
 
-@media (min-width: 1400px) and (max-width: 1650px) {
+@media (min-width: 1000px) and (max-width: 1068px) {
 
 	.personal__list {
 		.personal__phone, .personal__location {
 			margin-left: 2%;
 		}
 		.personal__mail, .personal__site {
+			margin-right:2%;
+		}
+	}
+
+}
+
+@media (min-width: 680px) and (max-width: 1000px) {
+
+	.personal__list {
+		padding-top: 20px;
+		> li {
+			display: inline-block;
+		}
+		.personal__phone, .personal__location, .personal__mail, .personal__skype {
+			float: none;
+			position: absolute;
+			width: 207px;
+		}
+		.personal__phone, .personal__location {
+			left: 0;
+			margin-left: 4%;
+		}
+		.personal__mail, .personal__skype {
+			right: 0;
+			margin-right: 4%;
+		}
+		.personal__location {
+			top: 60px;
+		}
+		.personal__skype {
+			top: 60px;
+		}
+	}
+
+}
+
+@media (min-width: 600px) and (max-width: 680px) {
+
+	.nobg {
+		font-size: 0.9em;
+	}
+	.personal__list {
+		padding-top: 20px;
+		> li {
+			display: inline-block;
+		}
+		.personal__phone, .personal__location, .personal__mail, .personal__skype {
+			float: none;
+			position: absolute;
+			width: 190px;
+		}
+		.personal__phone, .personal__location {
+			left: 0;
+			margin-left: 2%;
+		}
+		.personal__mail, .personal__skype {
+			right: 0;
 			margin-right: 2%;
+		}
+		.personal__location {
+			top: 60px;
+		}
+		.personal__skype {
+			top: 60px;
 		}
 	}
 

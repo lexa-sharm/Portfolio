@@ -468,14 +468,15 @@ html, body {
 
 .personal__list {
   position: relative;
-  height: 100px;
+  height: 120px;
   margin-bottom: 50px;
+  padding-top: 42px;
   background-color: #ffffff;
   border-top: 10px solid #e7e7e7;
   border-bottom: 10px solid #e7e7e7; }
   .personal__list > li {
     position: relative;
-    margin-top: 32px;
+    /*margin-top: 32px;*/
     padding-left: 35px;
     color: #626676; }
     .personal__list > li:before {
@@ -514,7 +515,7 @@ html, body {
   .personal__list .personal__phone, .personal__list .personal__location {
     float: left;
     margin-left: 4%; }
-  .personal__list .personal__mail, .personal__list .personal__site {
+  .personal__list .personal__mail, .personal__list .personal__skype {
     float: right;
     margin-right: 4%; }
   .personal__list .personal__phone:before {
@@ -523,7 +524,7 @@ html, body {
     background-position: 0 -28px; }
   .personal__list .personal__mail:before {
     background-position: 0 -58px; }
-  .personal__list .personal__site:before {
+  .personal__list .personal__skype:before {
     background-position: 0 -87px; }
 
 .personal__name {
@@ -690,7 +691,13 @@ html, body {
 
   .grid-3d-item__bg:hover .grid-3d-item__title {
     top: 50%;
-    opacity: 1; } }
+    opacity: 1; }
+
+  .modal .content {
+    width: 80%; }
+
+  .outer {
+    right: 6px; } }
 /*
 ================================================================================
 |                            SECTION-GRID-HEADER                                |
@@ -735,10 +742,51 @@ html, body {
 |                            MODAL INFO PERSONAL                                |
 ================================================================================
 */
-@media (min-width: 1400px) and (max-width: 1650px) {
+@media (min-width: 1000px) and (max-width: 1068px) {
   .personal__list .personal__phone, .personal__list .personal__location {
     margin-left: 2%; }
   .personal__list .personal__mail, .personal__list .personal__site {
     margin-right: 2%; } }
+@media (min-width: 680px) and (max-width: 1000px) {
+  .personal__list {
+    padding-top: 20px; }
+    .personal__list > li {
+      display: inline-block; }
+    .personal__list .personal__phone, .personal__list .personal__location, .personal__list .personal__mail, .personal__list .personal__skype {
+      float: none;
+      position: absolute;
+      width: 207px; }
+    .personal__list .personal__phone, .personal__list .personal__location {
+      left: 0;
+      margin-left: 4%; }
+    .personal__list .personal__mail, .personal__list .personal__skype {
+      right: 0;
+      margin-right: 4%; }
+    .personal__list .personal__location {
+      top: 60px; }
+    .personal__list .personal__skype {
+      top: 60px; } }
+@media (min-width: 600px) and (max-width: 680px) {
+  .nobg {
+    font-size: 0.9em; }
+
+  .personal__list {
+    padding-top: 20px; }
+    .personal__list > li {
+      display: inline-block; }
+    .personal__list .personal__phone, .personal__list .personal__location, .personal__list .personal__mail, .personal__list .personal__skype {
+      float: none;
+      position: absolute;
+      width: 190px; }
+    .personal__list .personal__phone, .personal__list .personal__location {
+      left: 0;
+      margin-left: 2%; }
+    .personal__list .personal__mail, .personal__list .personal__skype {
+      right: 0;
+      margin-right: 2%; }
+    .personal__list .personal__location {
+      top: 60px; }
+    .personal__list .personal__skype {
+      top: 60px; } }
 
 /*# sourceMappingURL=style.css.map */
