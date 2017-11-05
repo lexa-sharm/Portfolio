@@ -2,10 +2,12 @@ $(document).ready(function() {
   initModalHref();
   $(window).resize(function(){
     slide_resize();
+    showModalNoMobile();
   });
 
   $(window).load(function(){
     slide_resize();
+    showModalNoMobile();
   });
 });
 
@@ -28,7 +30,15 @@ function initModalHref(){
   });
 }
 
-
+function showModalNoMobile() {
+  if ($(window).width() < 767) {
+    $('.wrap-grid-3d').hide();
+    $('.modal-nomobile').show();
+  } else {
+    $('.modal-nomobile').hide();
+    $('.wrap-grid-3d').show();
+  }
+};
 
 
 
