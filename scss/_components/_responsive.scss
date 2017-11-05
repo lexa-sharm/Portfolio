@@ -18,6 +18,10 @@
 			top: 50px;
 		}
 	}
+	.backdrop .outer .inner label {
+		font-size: 0.9em;
+		line-height: 4.1em;
+	}
 
 }
 
@@ -42,6 +46,10 @@
 		.grid-3d-item__title {
 			top: 35px;
 		}
+	}
+	.backdrop .outer .inner label {
+		font-size: 1.1em;
+		line-height: 4.3em;
 	}
 
 }
@@ -71,6 +79,10 @@
 	}
 	.outer {
 		right: 6px;
+	}
+	.backdrop .outer .inner label {
+		font-size: 1.5em;
+		line-height: 4.5em;
 	}
 
 }
