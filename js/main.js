@@ -16,14 +16,14 @@ function slide_resize(){
 
 function initModalHref(){
   $('[data-href]').click(function(){
-    $('.modal iframe').attr('src', $(this).data('href'));
-    $('.modal').slideDown(300);
+    $('.modal-info iframe').attr('src', $(this).data('href'));
+    $('.modal-info').slideDown(300);
     $("body").css("overflow","hidden");
   });
 
   $('.backdrop').click(function(){
-    $('.modal').slideUp(300);
-    $('.modal iframe').removeAttr('src');
+    $('.modal-info').slideUp(300);
+    $('.modal-info iframe').removeAttr('src');
     $("body").css("overflow","auto");
   });
 }
