@@ -676,10 +676,34 @@ html, body {
 |                                SECTION-GRID                                   |
 ================================================================================
 */
-@media (min-width: 1279px) and (max-width: 1400px) {
+/*----------------------------------------------------------
+					FONTS SIZE RESPONSIVE
+----------------------------------------------------------*/
+@media (min-width: 1600px) {
   body {
-    font-size: 0.9em; }
-
+    font-size: 1.19em; } }
+@media (min-width: 1500px) and (max-width: 1600px) {
+  body {
+    font-size: 1.1em; } }
+@media (min-width: 1400px) and (max-width: 1500px) {
+  body {
+    font-size: 1em; } }
+@media (min-width: 1300px) and (max-width: 1400px) {
+  body {
+    font-size: 0.9em; } }
+@media (min-width: 1200px) and (max-width: 1300px) {
+  body {
+    font-size: 0.84em; } }
+@media (min-width: 1130px) and (max-width: 1200px) {
+  body {
+    font-size: 0.75em; } }
+@media (min-width: 1023px) and (max-width: 1130px) {
+  body {
+    font-size: 0.69em; } }
+@media (min-width: 767px) and (max-width: 1023px) {
+  body {
+    font-size: 0.5em; } }
+@media (min-width: 1279px) and (max-width: 1400px) {
   .grid-3d-item__descp h3 {
     margin: 10px 0; }
 
@@ -690,9 +714,6 @@ html, body {
     font-size: 0.9em;
     line-height: 4.1em; } }
 @media (min-width: 1023px) and (max-width: 1279px) {
-  body {
-    font-size: 0.69em; }
-
   .grid-3d-item {
     width: 19%; }
 
@@ -712,9 +733,6 @@ html, body {
     font-size: 1.1em;
     line-height: 4.3em; } }
 @media (min-width: 767px) and (max-width: 1023px) {
-  body {
-    font-size: 0.5em; }
-
   .grid-3d-item {
     width: 19%; }
 
