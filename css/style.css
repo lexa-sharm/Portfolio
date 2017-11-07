@@ -139,7 +139,7 @@ body {
     .grid-3d-item__header .grid-3d-item__photo .photo-wrap img {
       width: 100%; }
 .grid-3d-item__header .grid-3d-item__photo + .grid-3d-item__descp h3 {
-  font-size: 1.7em;
+  font-size: 1.5em;
   margin-top: 10%; }
 .grid-3d-item__header .grid-3d-item__photo + .grid-3d-item__descp h1 {
   font-size: 1em;
@@ -594,47 +594,43 @@ html, body {
 /*----------------------------------------------------------
 					STYLE MAIN
 ----------------------------------------------------------*/
-.main-content .about-me {
+.main-content .container {
   padding: 0 5%; }
-  .main-content .about-me h3 {
-    font-size: 2.5em;
-    text-align: center;
-    margin-bottom: 15px; }
-  .main-content .about-me .about-me__descr {
-    font-size: 1.3em;
-    line-height: 1.2em;
+.main-content h3 {
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 15px; }
+.main-content .about-me__descr {
+  font-size: 1.3em;
+  line-height: 1.2em;
+  text-indent: 2em;
+  margin-bottom: 15px; }
+.main-content .about-me__list {
+  font-size: 1.3em; }
+  .main-content .about-me__list > p {
     text-indent: 2em;
-    margin-bottom: 15px; }
-  .main-content .about-me .about-me__list {
-    font-size: 1.3em; }
-    .main-content .about-me .about-me__list > p {
-      text-indent: 2em;
-      margin-bottom: 10px; }
-    .main-content .about-me .about-me__list > ul {
-      padding-left: 80px; }
-      .main-content .about-me .about-me__list > ul li {
-        list-style: square;
-        margin-bottom: 5px; }
+    margin-bottom: 10px; }
+  .main-content .about-me__list > ul {
+    padding-left: 80px; }
+    .main-content .about-me__list > ul li {
+      list-style: square;
+      margin-bottom: 5px; }
 
-/*@media (min-width: 1400px) and (max-width: 1650px) {
-
-	.personal__list {
-		.personal__phone, .personal__location {
-			margin-left: 2%;
-		}
-		.personal__mail, .personal__site {
-			margin-right: 2%;
-		}
-	}
-
-}*/
 /*
 ================================================================================
 |                            MAIN-INFO-SKILLS                                   |
 ================================================================================
 */
+.main-content .main-skills .about-me__list {
+  margin-bottom: 40px; }
+  .main-content .main-skills .about-me__list > ul {
+    padding-left: 0; }
+    .main-content .main-skills .about-me__list > ul li {
+      list-style: none;
+      margin-bottom: 15px; }
+
 .wrap-skills {
-  width: 80%;
+  width: 100%;
   margin: 0 auto; }
 
 .holder {
@@ -646,19 +642,24 @@ html, body {
   margin: 15px 0;
   color: #fff;
   position: relative;
-  transition: width 2s, background .2s;
-  -webkit-transform: translate3d(0, 0, 0);
-  clear: both; }
+  -o-transition: all 2s ease;
+  -ms-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  clear: both;
+  border-radius: 0 10px 10px 0; }
   .bar:nth-of-type(2n) {
     background: #ed7669; }
   .bar .label {
-    padding: 10px;
+    padding: 8px;
     background: #3d3d3d;
-    width: 100px;
+    width: 120px;
     display: inline-block;
     position: relative;
     margin-left: -120px;
-    z-index: 2; }
+    z-index: 2;
+    border-radius: 10px 0 0 10px; }
     .bar .label.light {
       background: #575757; }
 
@@ -727,7 +728,7 @@ html, body {
     top: 50%;
     opacity: 1; }
 
-  .modal .content {
+  .modal-info .content {
     width: 80%; }
 
   .outer {

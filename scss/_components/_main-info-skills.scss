@@ -10,19 +10,24 @@ $redAL: rgba(231, 76, 60, 0.95);
 $dark: #3d3d3d;
 
 
-@mixin transition($transition-property, $transition-time, $method) {
-	-webkit-transition: $transition-property $transition-time $method;
-	-moz-transition: $transition-property $transition-time $method;
-	-ms-transition: $transition-property $transition-time $method;
-	-o-transition: $transition-property $transition-time $method;
-	transition: $transition-property $transition-time $method;
+.main-content {
+	.main-skills {
+		.about-me__list {
+			margin-bottom: 40px;
+			> ul {
+				padding-left: 0;
+				li {
+					list-style: none;
+					margin-bottom: 15px;
+				}
+			}
+		}
+	}
 }
 
 
-
-
 .wrap-skills {
-	width: 80%;
+	width: 100%;
 	margin: 0 auto;
 }
 
@@ -36,21 +41,21 @@ $dark: #3d3d3d;
 	margin: 15px 0;
 	color: #fff;
 	position: relative;
-	transition:width 2s, background .2s;
-	-webkit-transform: translate3d(0,0,0);
+	@include transition (all, 2s, ease);
 	clear: both;
+	border-radius: 0 10px 10px 0;
 	&:nth-of-type(2n) {
 		background: lighten($red , 10%);
 	}
 	.label {
-		padding: 10px;
+		padding: 8px;
 		background: $dark;
-		width: 100px;
+		width: 120px;
 		display: inline-block;
 		position: relative;
 		margin-left: -120px;
 		z-index: 2;
-
+		border-radius: 10px 0 0 10px;
 		&.light {
 			background: lighten($dark , 10% );
 		}

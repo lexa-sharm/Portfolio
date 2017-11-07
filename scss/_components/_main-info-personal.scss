@@ -195,47 +195,32 @@ html, body {
 
 
 .main-content {
-	.about-me {
+	.container {
 		padding: 0 5%;
-		h3 {
-			font-size: 2.5em;
-			text-align: center;
-			margin-bottom: 15px;
-		}
-		.about-me__descr {
-			font-size: 1.3em;
-			line-height: 1.2em;
+	}
+	h3 {
+		font-size: 2.5em;
+		text-align: center;
+		margin-bottom: 15px;
+	}
+	.about-me__descr {
+		font-size: 1.3em;
+		line-height: 1.2em;
+		text-indent: 2em;
+		margin-bottom: 15px;
+	}
+	.about-me__list {
+		font-size: 1.3em;
+		> p {
 			text-indent: 2em;
-			margin-bottom: 15px;
+			margin-bottom: 10px;
 		}
-		.about-me__list {
-			font-size: 1.3em;
-			> p {
-				text-indent: 2em;
-				margin-bottom: 10px;
-			}
-			> ul {
-				padding-left: 80px;
-				li {
-					list-style: square;
-					margin-bottom: 5px;
-				}
+		> ul {
+			padding-left: 80px;
+			li {
+				list-style: square;
+				margin-bottom: 5px;
 			}
 		}
 	}
 }
-
-
-
-/*@media (min-width: 1400px) and (max-width: 1650px) {
-
-	.personal__list {
-		.personal__phone, .personal__location {
-			margin-left: 2%;
-		}
-		.personal__mail, .personal__site {
-			margin-right: 2%;
-		}
-	}
-
-}*/
